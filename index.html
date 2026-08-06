@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Osama Elsayed — Senior Data Analyst</title>
+<meta name="description" content="Osama Elsayed — Senior Data Analyst specializing in SQL, Power BI, DAX, and Python analytics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-mark">osama<span>.</span>elsayed</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </div>
+    <a class="nav-cta" id="navContact" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div class="formula-bar">
+    <span class="cell-ref">B2</span>
+    <span class="typed" id="typedFormula"></span>
+  </div>
+  <h1>Turning raw data into<br>decisions that <span class="accent">hold up.</span></h1>
+  <div class="role-line" id="roleLine"></div>
+  <p class="lede" id="heroSummary"></p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#projects">View projects →</a>
+    <a class="btn btn-ghost" href="#contact">Get in touch</a>
+  </div>
+  <div class="hero-stats" id="heroStats"></div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="fx">=ABOUT()</div>
+    <div class="about-grid">
+      <div>
+        <p id="aboutSummary"></p>
+        <p id="aboutSummary2" style="margin-top:16px;">Based in Cairo, Egypt — working across BI, data engineering, and analytics tooling, with a habit of tracing every dashboard number back to the raw table it came from.</p>
+      </div>
+      <div class="about-card">
+        <h4>// EDUCATION & CERTS</h4>
+        <ul id="certList"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="fx">=EXPERIENCE()</div>
+      <h2>Where the work happened</h2>
+      <p>Six years, one company, three roles — each one adding more ownership over the data.</p>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="fx">=PROJECTS()</div>
+      <h2>Selected work</h2>
+      <p>Real systems, real messy data. Filter by stack, or scroll through all of it.</p>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="project-grid" id="projectGrid"></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="fx">=SKILLS()</div>
+      <h2>Toolset</h2>
+    </div>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="fx">=ACHIEVEMENTS()</div>
+      <h2>Certifications & recognition</h2>
+    </div>
+    <div class="ach-list" id="achList"></div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-row">
+      <div>
+        <h2 id="footName"></h2>
+        <p style="color:var(--text-dim); font-family:var(--font-mono); font-size:14px;" id="footLoc"></p>
+      </div>
+      <div class="contact-links" id="contactLinks"></div>
+    </div>
+    <div class="foot-note">Built and maintained as a single editable file — data.js</div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+/* ============================================================
+   Rendering layer — reads PROJECTS / EXPERIENCE / SKILLS / PROFILE
+   from data.js and builds the page. No need to edit this file.
+   ============================================================ */
+
+// ---- Hero ----
+document.getElementById('roleLine').textContent = `> ${PROFILE.title} · ${PROFILE.location}`;
+document.getElementById('heroSummary').textContent = PROFILE.summary;
+document.getElementById('aboutSummary').textContent = PROFILE.summary;
+document.getElementById('footName').textContent = PROFILE.fullName;
+document.getElementById('footLoc').textContent = PROFILE.location;
+
+document.getElementById('contactLinks').innerHTML = `
+  <a href="mailto:${PROFILE.email}">${PROFILE.email}</a>
+  <a href="tel:${PROFILE.phone}">${PROFILE.phone}</a>
+  <a href="${PROFILE.linkedin}" target="_blank" rel="noopener">LinkedIn ↗</a>
+`;
+
+document.getElementById('certList').innerHTML = PROFILE.achievements
+  .slice(0, 6)
+  .map(a => `<li>${a}</li>`).join('');
+document.getElementById('achList').innerHTML = PROFILE.achievements
+  .map(a => `<div class="ach-item">${a}</div>`).join('');
+
+// Hero stats derived from data
+const totalProjects = PROJECTS.length;
+const totalTools = new Set(PROJECTS.flatMap(p => p.stack)).size;
+document.getElementById('heroStats').innerHTML = `
+  <div><span class="num">6+</span><span class="lbl">Years experience</span></div>
+  <div><span class="num">${totalProjects}</span><span class="lbl">Featured projects</span></div>
+  <div><span class="num">${totalTools}+</span><span class="lbl">Tools in the stack</span></div>
+  <div><span class="num">3</span><span class="lbl">Roles, one company</span></div>
+`;
+
+// Typing effect for the formula bar
+const formulaText = `=PROFILE("${PROFILE.name}", "${PROFILE.title}")`;
+const typedEl = document.getElementById('typedFormula');
+let i = 0;
+function typeFormula(){
+  if(i <= formulaText.length){
+    typedEl.textContent = formulaText.slice(0, i);
+    i++;
+    setTimeout(typeFormula, 28);
+  }
+}
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  typedEl.textContent = formulaText;
+} else {
+  typeFormula();
+}
+
+// ---- Experience timeline ----
+document.getElementById('timeline').innerHTML = EXPERIENCE.map(job => `
+  <div class="tl-item">
+    <div class="tl-head">
+      <h3>${job.role}</h3>
+      <span class="org">${job.org}</span>
+      <span class="period">${job.period}</span>
+    </div>
+    <ul>${job.points.map(p => `<li>${p}</li>`).join('')}</ul>
+  </div>
+`).join('');
+
+// ---- Skills ----
+document.getElementById('skillsGrid').innerHTML = SKILLS.map(g => `
+  <div class="skill-card">
+    <h4>// ${g.group.toUpperCase()}</h4>
+    <div>${g.items.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+  </div>
+`).join('');
+
+// ---- Projects + filters ----
+const grid = document.getElementById('projectGrid');
+const filterBar = document.getElementById('filters');
+
+function renderProjects(list){
+  grid.innerHTML = list.map(p => `
+    <article class="project-card">
+      <div class="pc-top">
+        <span class="pc-tag">${p.tag}</span>
+        <span class="pc-period">${p.period}</span>
+      </div>
+      <h3>${p.title}</h3>
+      <p class="summary">${p.summary}</p>
+      ${p.metrics && p.metrics.length ? `
+      <div class="metrics">
+        ${p.metrics.map(m => `<div><span class="num">${m.value}</span><span class="lbl">${m.label}</span></div>`).join('')}
+      </div>` : ''}
+      <ul class="highlights">
+        ${p.highlights.slice(0,4).map(h => `<li>${h}</li>`).join('')}
+      </ul>
+      <div class="stack-row">
+        ${p.stack.map(s => `<span class="chip">${s}</span>`).join('')}
+      </div>
+      ${p.link ? `<a class="pc-link" href="${p.link}" target="_blank" rel="noopener">View project →</a>` : ''}
+    </article>
+  `).join('');
+}
+
+const allTools = ['All', ...Array.from(new Set(PROJECTS.flatMap(p => p.stack)))];
+filterBar.innerHTML = allTools.map((t,idx) =>
+  `<button class="filter-btn ${idx===0 ? 'active':''}" data-tool="${t}">${t}</button>`
+).join('');
+
+filterBar.addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn');
+  if(!btn) return;
+  filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const tool = btn.dataset.tool;
+  renderProjects(tool === 'All' ? PROJECTS : PROJECTS.filter(p => p.stack.includes(tool)));
+});
+
+renderProjects(PROJECTS);
+</script>
+</body>
+</html>
