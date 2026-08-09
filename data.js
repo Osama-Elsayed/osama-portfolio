@@ -162,7 +162,8 @@ const PROFILE = {
   location: "Cairo, Egypt",
   email: "osama.sayed1993@gmail.com",
   phone: "01064334319",
-  linkedin: "https://www.linkedin.com/in/osama-el-sayed-b67027a5/",
+  linkedin: "https://www.linkedin.com/",
+  cvLink: "Osama_Elsayed.pdf",
   summary:
     "Senior Data Analyst with 6+ years designing end-to-end BI solutions — from data cleaning and star-schema modeling to DAX measures and executive-ready Power BI dashboards. Delivered recurring analytics and supplier-risk reporting for Fortune 500 accounts including Google, Apple, and GM.",
   achievements: [
