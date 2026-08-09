@@ -43,22 +43,16 @@
 <header class="hero wrap">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="formula-bar">
-        <span class="cell-ref">B2</span>
-        <span class="typed" id="typedFormula"></span>
-      </div>
-
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span id="heroStatus">Available for opportunities</span>
+      <!-- New clean tag instead of formula bar -->
+      <div class="hero-tagline">
+        <span class="tagline-dot"></span>
+        <span>Senior Data Analyst · Cairo, Egypt</span>
       </div>
 
       <h1>
         <span class="hero-greeting">Hi, I'm</span>
         <span class="hero-name">Osama Elsayed</span>
       </h1>
-
-      <div class="role-line" id="roleLine"></div>
 
       <p class="lede" id="heroSummary"></p>
 
@@ -71,10 +65,10 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           Get in Touch
         </a>
-        <button class="btn btn-secondary" id="copyEmailBtn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-          <span id="copyEmailText">Copy Email</span>
-        </button>
+        <a class="btn btn-cv" id="cvBtn" href="#" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span id="cvBtnText">Download CV</span>
+        </a>
       </div>
 
       <div class="hero-stats" id="heroStats"></div>
@@ -207,16 +201,27 @@
 <script src="data.js"></script>
 <script>
 /* ============================================================
-   Rendering layer — reads PROJECTS / EXPERIENCE / SKILLS / PROFILE
-   from data.js and builds the page. No need to edit this file.
+   Rendering layer
    ============================================================ */
 
 // ---- Hero ----
-document.getElementById('roleLine').textContent = `> ${PROFILE.title} · ${PROFILE.location}`;
 document.getElementById('heroSummary').textContent = PROFILE.summary;
 document.getElementById('aboutSummary').textContent = PROFILE.summary;
 document.getElementById('footName').textContent = PROFILE.fullName;
 document.getElementById('footLoc').textContent = PROFILE.location;
+
+// CV button logic
+const cvBtn = document.getElementById('cvBtn');
+const cvBtnText = document.getElementById('cvBtnText');
+if (PROFILE.cvLink && PROFILE.cvLink.trim() !== '') {
+  cvBtn.href = PROFILE.cvLink;
+} else {
+  cvBtn.href = '#';
+  cvBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    showToast('CV coming soon — add your PDF link in data.js');
+  });
+}
 
 document.getElementById('contactLinks').innerHTML = `
   <a href="mailto:${PROFILE.email}" class="contact-link contact-link--primary">
@@ -239,7 +244,7 @@ document.getElementById('certList').innerHTML = PROFILE.achievements
 document.getElementById('achList').innerHTML = PROFILE.achievements
   .map(a => `<div class="ach-item">${a}</div>`).join('');
 
-// Hero stats derived from data
+// Hero stats
 const totalProjects = PROJECTS.length;
 const totalTools = new Set(PROJECTS.flatMap(p => p.stack)).size;
 document.getElementById('heroStats').innerHTML = `
@@ -249,37 +254,7 @@ document.getElementById('heroStats').innerHTML = `
   <div class="stat-card"><span class="num">3</span><span class="lbl">Roles, one company</span></div>
 `;
 
-// Typing effect for the formula bar
-const formulaText = `=PROFILE("${PROFILE.name}", "${PROFILE.title}")`;
-const typedEl = document.getElementById('typedFormula');
-let i = 0;
-function typeFormula(){
-  if(i <= formulaText.length){
-    typedEl.textContent = formulaText.slice(0, i);
-    i++;
-    setTimeout(typeFormula, 28);
-  }
-}
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  typedEl.textContent = formulaText;
-} else {
-  typeFormula();
-}
-
-// ---- Copy email ----
-document.getElementById('copyEmailBtn').addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText(PROFILE.email);
-    showToast('Email copied to clipboard!');
-    const btnText = document.getElementById('copyEmailText');
-    const original = btnText.textContent;
-    btnText.textContent = 'Copied!';
-    setTimeout(() => btnText.textContent = original, 2000);
-  } catch (err) {
-    showToast('Could not copy email');
-  }
-});
-
+// ---- Toast ----
 function showToast(msg) {
   const toast = document.getElementById('toast');
   document.getElementById('toastMsg').textContent = msg;
@@ -292,7 +267,9 @@ document.getElementById('timeline').innerHTML = EXPERIENCE.map((job, idx) => `
   <div class="tl-item" style="--delay:${idx * 0.1}s">
     <div class="tl-head">
       <h3>${job.role}</h3>
-      <span class="org">${job.org}</span>
+      <span class="org">
+        ${job.org === 'Z2Data' ? '<img src="Z2_Logo_NEG_RGB.png" alt="Z2Data" class="org-logo">' : job.org}
+      </span>
       <span class="period">${job.period}</span>
     </div>
     <ul>${job.points.map(p => `<li>${p}</li>`).join('')}</ul>
@@ -359,7 +336,6 @@ navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('open');
 });
 
-// Close mobile nav on link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
@@ -396,7 +372,7 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ---- Intersection Observer for animations ----
+// ---- Intersection Observer ----
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px'
@@ -416,7 +392,7 @@ document.querySelectorAll('section, .tl-item, .skill-card, .project-card, .ach-i
   observer.observe(el);
 });
 
-// ---- Active nav link on scroll ----
+// ---- Active nav link ----
 const sections = document.querySelectorAll('section[id]');
 const navItems = document.querySelectorAll('.nav-links a');
 
