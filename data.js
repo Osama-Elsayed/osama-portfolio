@@ -42,7 +42,7 @@ const PROJECTS = [
       { label: "DAX measures", value: "40+" },
       { label: "Report pages", value: "4" },
     ],
-    link: "",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiNTcxOWI1ZmQtNzlkYS00MjJkLThiODItMjgwZjk0YmU5MWMyIiwidCI6IjQxNTRmZDBlLTY5OTMtNDFmNS1iMmQ3LTY5OWU0ZjBiZjA2ZSJ9",
   },
   {
     id: "attrition",
@@ -62,7 +62,7 @@ const PROJECTS = [
       { label: "Custom measures", value: "50+" },
       { label: "Risk dimensions", value: "4" },
     ],
-    link: "",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiNmU4NjY0NDctZjhiYy00OWIxLWJmY2YtYmVlNjJlYzZiODI4IiwidCI6IjQxNTRmZDBlLTY5OTMtNDFmNS1iMmQ3LTY5OWU0ZjBiZjA2ZSJ9",
   },
   {
     id: "globalsales",
@@ -81,7 +81,7 @@ const PROJECTS = [
       { label: "Currencies", value: "Multi" },
       { label: "Comparison", value: "YoY" },
     ],
-    link: "",
+    link: "https://app.powerbi.com/view?r=eyJrIjoiZjY5NWJmOWYtYmQ5OS00Mjk2LWE2ZDYtM2E5YzUxNjg2M2NhIiwidCI6IjQxNTRmZDBlLTY5OTMtNDFmNS1iMmQ3LTY5OWU0ZjBiZjA2ZSJ9",
   },
   {
     id: "realestate",
@@ -100,7 +100,7 @@ const PROJECTS = [
       { label: "Source tables", value: "2" },
       { label: "Cleaning steps", value: "14" },
     ],
-    link: "",
+    link: "Data Analyst Career Track Project.html",
   },
 ];
 
