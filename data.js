@@ -164,8 +164,9 @@ const PROFILE = {
   phone: "01064334319",
   linkedin: "https://www.linkedin.com/",
   cvLink: "Osama_Elsayed.pdf",
+  yearsExperience: "7+",
   summary:
-    "Senior Data Analyst with 6+ years designing end-to-end BI solutions — from data cleaning and star-schema modeling to DAX measures and executive-ready Power BI dashboards. Delivered recurring analytics and supplier-risk reporting for Fortune 500 accounts including Google, Apple, and GM.",
+    "Senior Data Analyst with 7+ years designing end-to-end BI solutions — from data cleaning and star-schema modeling to DAX measures and executive-ready Power BI dashboards. Delivered recurring analytics and supplier-risk reporting for Fortune 500 accounts including Google, Apple, and GM.",
   achievements: [
     "3rd Place, Data Analysis Hackathon — Orange Digital Center (95% score, 28-hour case competition, Feb 2026)",
     "Power BI, DAX, Power Query & Data Modeling — 365 Data Science",
