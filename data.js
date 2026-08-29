@@ -163,6 +163,7 @@ const PROFILE = {
   email: "osama.sayed1993@gmail.com",
   phone: "01064334319",
   linkedin: "https://www.linkedin.com/",
+  facebook: "https://www.facebook.com/osama.el.sayed.631557/",
   cvLink: "Osama_Elsayed.pdf",
   yearsExperience: "7+",
   summary:
