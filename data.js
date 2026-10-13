@@ -162,7 +162,7 @@ const PROFILE = {
   location: "Cairo, Egypt",
   email: "osama.sayed1993@gmail.com",
   phone: "01064334319",
-  linkedin: "https://www.linkedin.com/",
+  linkedin: "https://www.linkedin.com/in/osama-el-sayed-b67027a5//",
   facebook: "https://www.facebook.com/osama.el.sayed.631557/",
   cvLink: "Osama_Elsayed.pdf",
   yearsExperience: "7+",
