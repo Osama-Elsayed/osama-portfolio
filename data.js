@@ -147,7 +147,7 @@ const EXPERIENCE = [
    ------------------------------------------------------------ */
 const SKILLS = [
   { group: "Databases & SQL", items: ["SQL Server", "CTEs & Window Functions", "Query Optimization", "Star Schema Design"] },
-  { group: "BI & Visualization", items: ["Power BI", "DAX", "Power Query", "Deneb / Vega-Lite", "Row-Level Security"] },
+  { group: "BI & Visualization", items: ["Power BI", "DAX", "Power Query", "Row-Level Security"] },
   { group: "Programming", items: ["Python", "Pandas", "NumPy", "Matplotlib"] },
   { group: "Practice", items: ["Data Cleaning & Validation", "KPI Design", "Report Automation", "Stakeholder Reporting"] },
 ];
@@ -162,7 +162,7 @@ const PROFILE = {
   location: "Cairo, Egypt",
   email: "osama.sayed1993@gmail.com",
   phone: "01064334319",
-  linkedin: "https://www.linkedin.com/in/osama-el-sayed-b67027a5//",
+  linkedin: "https://www.linkedin.com/in/osama-el-sayed-b67027a5/",
   facebook: "https://www.facebook.com/osama.el.sayed.631557/",
   cvLink: "Osama_Elsayed.pdf",
   yearsExperience: "7+",
