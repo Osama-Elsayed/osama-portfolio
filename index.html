@@ -3,407 +3,515 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Osama Elsayed — Senior Data Analyst</title>
-<meta name="description" content="Osama Elsayed — Senior Data Analyst specializing in SQL, Power BI, DAX, and Python analytics.">
-<meta property="og:title" content="Osama Elsayed — Senior Data Analyst">
-<meta property="og:description" content="7+ years designing end-to-end BI solutions. SQL, Power BI, DAX, Python.">
+<title>Osama Elsayed — Senior Data Analyst & Power BI Developer</title>
+<meta name="description" content="Osama Elsayed — Senior Data Analyst and Power BI Developer in Cairo. SQL Server, Power BI, DAX, star-schema modeling and Python. Live dashboards and case studies.">
+<meta name="theme-color" content="#0A0F1A">
+<meta property="og:title" content="Osama Elsayed — Senior Data Analyst & Power BI Developer">
+<meta property="og:description" content="7+ years designing end-to-end BI solutions. SQL Server, Power BI, DAX, Python. Live dashboards and case studies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://osama-elsayed.github.io/osama-portfolio/">
+<meta property="og:image" content="https://osama-elsayed.github.io/osama-portfolio/images/salespulse-cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0F1A'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23D4AF5F' text-anchor='middle'%3EOE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Progress bar -->
 <div class="progress-bar" id="progressBar"></div>
+<div class="glow glow-a" aria-hidden="true"></div>
+<div class="glow glow-b" aria-hidden="true"></div>
 
 <!-- Nav -->
 <nav class="nav" id="navbar">
-  <div class="wrap">
-    <a href="#top" class="nav-mark">Osama Elsayed</a>
+  <div class="nav-pill">
+    <a href="#top" class="nav-mark" aria-label="Back to top"><span class="mark-badge">OE</span><span class="mark-name">Osama Elsayed</span></a>
     <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
+      <a href="#projects">Work</a>
       <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
-      <a href="#achievements">Certs</a>
+      <a href="#about">About</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact" class="nav-links-cta">Contact</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+    <a class="nav-cta" href="#contact">Let's talk</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
     </button>
-    <a class="nav-cta" href="#contact">Contact</a>
   </div>
 </nav>
 
 <!-- Hero -->
-<header class="hero wrap" id="top">
-  <div class="hero-inner">
+<header class="hero" id="top">
+  <div class="wrap hero-inner">
     <div class="hero-content">
-      <div class="hero-tagline">
-        <span class="tagline-dot"></span>
-        <span>Senior Data Analyst · Cairo, Egypt</span>
+      <div class="hero-status" id="heroStatus">
+        <span class="pulse"></span>
+        <span id="heroStatusText"></span>
       </div>
 
-      <h1>
-        <span class="hero-greeting">Hi, I'm</span>
-        <span class="hero-name">Osama Elsayed</span>
-      </h1>
+      <h1 class="hero-title" id="heroTitle"></h1>
 
       <p class="lede" id="heroSummary"></p>
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="#projects">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-          View Projects
+          View my work
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
-        <a class="btn btn-ghost" href="#contact">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          Get in Touch
-        </a>
-        <a class="btn btn-cv" id="cvBtn" href="#" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          <span id="cvBtnText">Download CV</span>
+        <a class="btn btn-ghost" id="cvBtn" href="#" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download CV
         </a>
       </div>
 
-      <div class="hero-stats" id="heroStats"></div>
+      <div class="hero-clients" id="heroClients"></div>
     </div>
 
     <div class="hero-visual">
       <div class="portrait-frame">
-        <img src="profile.jpg" alt="Osama Elsayed" class="portrait-img">
-        <div class="portrait-caption">
-          <strong>Osama Elsayed</strong>
-          Senior Data Analyst · Cairo, Egypt
-        </div>
+        <img src="profile.jpg" alt="Portrait of Osama Elsayed" class="portrait-img" id="portraitImg" onerror="this.parentElement.classList.add('no-img')">
+        <div class="portrait-fallback" aria-hidden="true">OE</div>
       </div>
+      <div class="now-card" id="nowCard"></div>
     </div>
   </div>
 
-  <div class="scroll-indicator">
-    <div class="mouse">
-      <div class="wheel"></div>
-    </div>
-    <span>Scroll to explore</span>
+  <div class="wrap">
+    <div class="stats-band" id="heroStats"></div>
   </div>
 </header>
 
-<section id="about">
+<!-- Projects -->
+<section id="projects">
   <div class="wrap">
-    <div class="fx">=ABOUT()</div>
-    <div class="about-grid">
-      <div class="about-main">
-        <h2 class="section-title">Building data systems<br>that <span class="accent">actually work.</span></h2>
-        <p id="aboutSummary"></p>
-        <p id="aboutSummary2">Based in Cairo, Egypt — working across BI, data engineering, and analytics tooling, with a habit of tracing every dashboard number back to the raw table it came from.</p>
-        <div class="about-cta">
-          <a href="#projects" class="btn btn-primary">See my work →</a>
-          <a href="#contact" class="btn btn-ghost">Contact me</a>
-        </div>
-      </div>
-      <div class="about-card">
-        <h4>// EDUCATION & CERTS</h4>
-        <ul id="certList"></ul>
-      </div>
+    <div class="section-head">
+      <div class="eyebrow"><span class="idx">01</span><span class="fx">=PROJECTS()</span></div>
+      <h2>Selected work</h2>
+      <p>Real systems built on real, messy data. Every dashboard below is live — open it and click around.</p>
     </div>
+    <div class="filters" id="filters" role="toolbar" aria-label="Filter projects by tool"></div>
+    <div id="featuredSlot"></div>
+    <div class="project-grid" id="projectGrid"></div>
   </div>
 </section>
 
+<!-- Experience -->
 <section id="experience">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="fx">=EXPERIENCE()</div>
+  <div class="wrap exp-layout">
+    <div class="section-head sticky-head">
+      <div class="eyebrow"><span class="idx">02</span><span class="fx">=EXPERIENCE()</span></div>
       <h2>Where the work happened</h2>
-      <p>Seven-plus years, one company, three roles — each one adding more ownership over the data.</p>
+      <p id="expIntro"></p>
     </div>
     <div class="timeline" id="timeline"></div>
   </div>
 </section>
 
-<section id="projects">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="fx">=PROJECTS()</div>
-      <h2>Selected work</h2>
-      <p>Real systems, real messy data. Filter by stack, or scroll through all of it.</p>
-    </div>
-    <div class="filters" id="filters"></div>
-    <div class="project-grid" id="projectGrid"></div>
-  </div>
-</section>
-
+<!-- Skills -->
 <section id="skills">
   <div class="wrap">
     <div class="section-head">
-      <div class="fx">=SKILLS()</div>
+      <div class="eyebrow"><span class="idx">03</span><span class="fx">=SKILLS()</span></div>
       <h2>Toolset</h2>
+      <p>The stack I use daily, from the database layer to the report a manager opens on Monday morning.</p>
     </div>
     <div class="skills-grid" id="skillsGrid"></div>
   </div>
 </section>
 
-<section id="achievements">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="fx">=ACHIEVEMENTS()</div>
-      <h2>Certifications & recognition</h2>
+<!-- About -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-main">
+      <div class="eyebrow"><span class="idx">04</span><span class="fx">=ABOUT()</span></div>
+      <h2 class="section-title">Building data systems<br>that <em class="accent">actually work.</em></h2>
+      <p id="aboutSummary"></p>
+      <p id="aboutSummary2"></p>
     </div>
-    <div class="ach-list" id="achList"></div>
+    <aside class="about-card card">
+      <div class="about-row">
+        <span class="about-label">Based in</span>
+        <span id="aboutLoc"></span>
+      </div>
+      <div class="about-row">
+        <span class="about-label">Education</span>
+        <span id="aboutEdu"></span>
+      </div>
+      <div class="about-row">
+        <span class="about-label">Focus</span>
+        <span>BI development · Data modeling · Data quality</span>
+      </div>
+      <div class="about-row">
+        <span class="about-label">Languages</span>
+        <span>Arabic (native) · English (professional)</span>
+      </div>
+    </aside>
   </div>
 </section>
 
+<!-- Credentials -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="idx">05</span><span class="fx">=CREDENTIALS()</span></div>
+      <h2>Recognition & certifications</h2>
+    </div>
+    <div class="cred-layout">
+      <div class="award-card card" id="awardCard"></div>
+      <ul class="cert-list" id="certList"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
 <footer id="contact">
   <div class="wrap">
-    <div class="contact-hero">
-      <h2>Let's work<br>together.</h2>
-      <p>Have a project in mind or just want to chat about data? I'm always open to discussing new opportunities.</p>
-    </div>
-    <div class="contact-row">
-      <div class="contact-info">
-        <h3 id="footName"></h3>
-        <p class="contact-location" id="footLoc"></p>
-      </div>
+    <div class="contact-card card">
+      <div class="eyebrow center"><span class="fx">=CONTACT()</span></div>
+      <h2>Have data that needs<br><em class="accent">making sense of?</em></h2>
+      <p>Open to full-time roles and freelance BI projects. The fastest way to reach me is email.</p>
       <div class="contact-links" id="contactLinks"></div>
     </div>
     <div class="foot-note">
-      <span>Built and maintained as a single editable file — data.js</span>
-      <span>© 2026 Osama Elsayed</span>
+      <span id="footName"></span>
+      <span>© <span id="year"></span> · Designed & built by Osama Elsayed</span>
     </div>
   </div>
 </footer>
 
+<!-- Case study dialog -->
+<dialog class="case-dialog" id="caseDialog" aria-labelledby="caseTitle">
+  <div class="case-inner" id="caseInner"></div>
+</dialog>
+
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
 </button>
 
-<div class="toast" id="toast">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-  <span id="toastMsg">Copied!</span>
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  <span id="toastMsg"></span>
 </div>
 
 <script src="data.js"></script>
 <script>
 /* ============================================================
-   Rendering layer
+   Rendering layer — everything below reads from data.js
    ============================================================ */
+const $ = (id) => document.getElementById(id);
+const isLive = (p) => /^https?:\/\//.test(p.link || '');
+const ICON = {
+  arrowUpRight: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>',
+  mail: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>',
+  phone: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>',
+  linkedin: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>',
+  github: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>',
+  facebook: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>',
+  copy: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>',
+  award: '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>',
+  close: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>',
+};
 
 // ---- Hero ----
-document.getElementById('heroSummary').textContent = PROFILE.summary;
-document.getElementById('aboutSummary').textContent = PROFILE.summary;
-document.getElementById('footName').textContent = PROFILE.fullName;
-document.getElementById('footLoc').textContent = PROFILE.location;
+$('heroStatusText').textContent = PROFILE.available || `${PROFILE.title} · ${PROFILE.location}`;
+(function renderHeadline(){
+  const h = PROFILE.headline || `Hi, I'm ${PROFILE.name}`;
+  // last word gets the gold italic accent
+  const words = h.trim().split(' ');
+  const last = words.pop();
+  $('heroTitle').innerHTML = `<span class="hero-kicker">${PROFILE.name} — ${PROFILE.subtitle || PROFILE.title}</span>${words.join(' ')} <em>${last}</em>`;
+})();
+$('heroSummary').textContent = PROFILE.summary;
+$('aboutSummary').textContent = PROFILE.about1 || PROFILE.summary;
+$('aboutSummary2').textContent = PROFILE.about2 || '';
+$('aboutLoc').textContent = PROFILE.location;
+$('aboutEdu').textContent = PROFILE.education || '';
+$('footName').textContent = PROFILE.fullName;
+$('year').textContent = new Date().getFullYear();
 
-// CV button logic — this is the ONLY button that should always open a new tab
-const cvBtn = document.getElementById('cvBtn');
+if (PROFILE.clients && PROFILE.clients.length){
+  $('heroClients').innerHTML = `<span class="clients-label">Reporting delivered for accounts including</span>
+    <div class="clients-row">${PROFILE.clients.map(c => `<span class="client">${c}</span>`).join('<span class="client-sep"></span>')}</div>`;
+}
+
+
+// "Now" card — every role whose period ends in "Present"
+const current = EXPERIENCE.filter(j => /present/i.test(j.period));
+$('nowCard').innerHTML = `
+  <span class="now-label"><span class="pulse small"></span>Currently</span>
+  ${current.map(j => `<div class="now-item"><strong>${j.role}</strong><span>${j.org}${j.type ? ' · ' + j.type.split('·')[0].trim() : ''}</span></div>`).join('')}
+`;
+
+// CV button
+const cvBtn = $('cvBtn');
 if (PROFILE.cvLink && PROFILE.cvLink.trim() !== '') {
   cvBtn.href = PROFILE.cvLink;
 } else {
   cvBtn.removeAttribute('target');
-  cvBtn.href = '#';
-  cvBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    showToast('CV coming soon — add your PDF link in data.js');
-  });
+  cvBtn.addEventListener('click', (e) => { e.preventDefault(); showToast('CV coming soon'); });
 }
 
-// Contact links: mailto/tel stay in this tab; LinkedIn is external, opens a new tab
-document.getElementById('contactLinks').innerHTML = `
-  <a href="mailto:${PROFILE.email}" class="contact-link contact-link--primary">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-    ${PROFILE.email}
-  </a>
-  <a href="tel:${PROFILE.phone}" class="contact-link">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-    ${PROFILE.phone}
-  </a>
-  <a href="${PROFILE.linkedin}" target="_blank" rel="noopener" class="contact-link">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-    LinkedIn ↗
-  </a>
-  <a href="${PROFILE.facebook}" target="_blank" rel="noopener" class="contact-link">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-    Facebook ↗
-  </a>
-`;
-
-document.getElementById('certList').innerHTML = PROFILE.achievements
-  .slice(0, 6)
-  .map(a => `<li>${a}</li>`).join('');
-document.getElementById('achList').innerHTML = PROFILE.achievements
-  .map(a => `<div class="ach-item">${a}</div>`).join('');
-
-// Hero stats
-const totalProjects = PROJECTS.length;
-const totalTools = new Set(PROJECTS.flatMap(p => p.stack)).size;
-const years = PROFILE.yearsExperience || '7+';
-document.getElementById('heroStats').innerHTML = `
-  <div class="stat-card"><span class="num">${years}</span><span class="lbl">Years experience</span></div>
-  <div class="stat-card"><span class="num">${totalProjects}</span><span class="lbl">Featured projects</span></div>
-  <div class="stat-card"><span class="num">${totalTools}+</span><span class="lbl">Tools in stack</span></div>
-  <div class="stat-card"><span class="num">3</span><span class="lbl">Roles, one company</span></div>
-`;
+// Stats band
+const liveCount = PROJECTS.filter(isLive).length;
+const totalTools = new Set([...PROJECTS.flatMap(p => p.stack), ...SKILLS.flatMap(s => s.items)]).size;
+const stats = [
+  { num: PROFILE.yearsExperience || '7+', lbl: 'Years turning data into decisions' },
+  { num: String(PROJECTS.length), lbl: 'Featured projects' },
+  { num: String(liveCount), lbl: 'Live Power BI dashboards' },
+  { num: `${totalTools}+`, lbl: 'Tools & techniques in stack' },
+];
+$('heroStats').innerHTML = stats.map(s => `
+  <div class="stat"><span class="num" data-count="${s.num}">${s.num}</span><span class="lbl">${s.lbl}</span></div>
+`).join('');
 
 // ---- Toast ----
 function showToast(msg) {
-  const toast = document.getElementById('toast');
-  document.getElementById('toastMsg').textContent = msg;
+  const toast = $('toast');
+  $('toastMsg').textContent = msg;
   toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3000);
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => toast.classList.remove('show'), 2600);
 }
 
-// ---- Experience timeline ----
-document.getElementById('timeline').innerHTML = EXPERIENCE.map((job, idx) => `
-  <div class="tl-item" style="--delay:${idx * 0.1}s">
+// ---- Experience ----
+const orgs = new Set(EXPERIENCE.map(j => j.org));
+$('expIntro').textContent = `${PROFILE.yearsExperience || ''} years across ${EXPERIENCE.length} roles${orgs.size > 1 ? ` and ${orgs.size} organizations` : ''} — each one adding more ownership over the data, from raw tables to the report leadership reads.`;
+$('timeline').innerHTML = EXPERIENCE.map((job, idx) => `
+  <article class="tl-item card ${/present/i.test(job.period) ? 'is-current' : ''}" style="--delay:${idx * 0.08}s">
     <div class="tl-head">
-      <h3>${job.role}</h3>
-      <span class="org">
-        ${job.org === 'Z2Data' ? '<img src="Z2_Logo_NEG_RGB.png" alt="Z2Data" class="org-logo">' : job.org}
-      </span>
+      <div>
+        <h3>${job.role}</h3>
+        <span class="org">
+          ${job.org === 'Z2Data'
+            ? '<img src="Z2_Logo_NEG_RGB.png" alt="Z2Data" class="org-logo" onerror="this.replaceWith(document.createTextNode(\'Z2Data\'))">'
+            : job.org}
+          ${job.type ? `<span class="tl-type">${job.type}</span>` : ''}
+        </span>
+      </div>
       <span class="period">${job.period}</span>
     </div>
     <ul>${job.points.map(p => `<li>${p}</li>`).join('')}</ul>
-  </div>
+  </article>
 `).join('');
 
 // ---- Skills ----
-document.getElementById('skillsGrid').innerHTML = SKILLS.map((g, idx) => `
-  <div class="skill-card" style="--delay:${idx * 0.08}s">
-    <h4>// ${g.group.toUpperCase()}</h4>
-    <div>${g.items.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+$('skillsGrid').innerHTML = SKILLS.map((g, idx) => `
+  <div class="skill-card card" style="--delay:${idx * 0.08}s">
+    <span class="skill-idx">0${idx + 1}</span>
+    <h3>${g.group}</h3>
+    <div class="chips">${g.items.map(s => `<span class="chip">${s}</span>`).join('')}</div>
   </div>
 `).join('');
 
-// ---- Projects + filters ----
-const grid = document.getElementById('projectGrid');
-const filterBar = document.getElementById('filters');
+// ---- Credentials ----
+if (PROFILE.award){
+  const [title, ...rest] = PROFILE.award.split(' — ');
+  $('awardCard').innerHTML = `
+    <div class="award-icon">${ICON.award}</div>
+    <span class="award-label">Award</span>
+    <h3>${title}</h3>
+    <p>${rest.join(' — ')}</p>`;
+} else { $('awardCard').remove(); }
+$('certList').innerHTML = (PROFILE.certifications || []).map(c => {
+  const [name, issuer] = c.split(' — ');
+  return `<li class="cert"><span class="cert-name">${name}</span>${issuer ? `<span class="cert-issuer">${issuer}</span>` : ''}</li>`;
+}).join('');
 
-function renderProjects(list){
-  grid.innerHTML = list.map((p, idx) => `
-    <article class="project-card" style="--delay:${idx * 0.08}s">
-      <div class="pc-top">
-        <span class="pc-tag">${p.tag}</span>
-        <span class="pc-period">${p.period}</span>
-      </div>
+// ---- Contact ----
+const links = [];
+links.push(`<a href="mailto:${PROFILE.email}" class="contact-link contact-link--primary">${ICON.mail}<span>${PROFILE.email}</span></a>`);
+links.push(`<button type="button" class="contact-link contact-copy" data-copy="${PROFILE.email}" aria-label="Copy email address">${ICON.copy}<span>Copy email</span></button>`);
+if (PROFILE.phone) links.push(`<a href="tel:${PROFILE.phone.replace(/\s/g,'')}" class="contact-link">${ICON.phone}<span>${PROFILE.phone}</span></a>`);
+if (PROFILE.linkedin) links.push(`<a href="${PROFILE.linkedin}" target="_blank" rel="noopener" class="contact-link">${ICON.linkedin}<span>LinkedIn</span>${ICON.arrowUpRight}</a>`);
+if (PROFILE.github) links.push(`<a href="${PROFILE.github}" target="_blank" rel="noopener" class="contact-link">${ICON.github}<span>GitHub</span>${ICON.arrowUpRight}</a>`);
+if (PROFILE.facebook) links.push(`<a href="${PROFILE.facebook}" target="_blank" rel="noopener" class="contact-link">${ICON.facebook}<span>Facebook</span>${ICON.arrowUpRight}</a>`);
+$('contactLinks').innerHTML = links.join('');
+document.querySelector('.contact-copy').addEventListener('click', async (e) => {
+  try { await navigator.clipboard.writeText(e.currentTarget.dataset.copy); showToast('Email copied'); }
+  catch { showToast(PROFILE.email); }
+});
+
+// ---- Projects ----
+function shot(p, cls = ''){
+  if (p.image) {
+    return `<div class="shot ${cls}">
+      <div class="shot-bar"><i></i><i></i><i></i><span>${isLive(p) ? 'Power BI · live' : p.tag}</span></div>
+      <div class="shot-img"><img src="${p.image}" alt="Screenshot of ${p.title}" loading="lazy"></div>
+    </div>`;
+  }
+  return `<div class="shot shot--empty ${cls}">
+    <div class="shot-bar"><i></i><i></i><i></i><span>${p.tag}</span></div>
+    <div class="shot-img"><div class="shot-placeholder"><span class="fx">=${p.stack[0].toUpperCase()}()</span><code>${p.stack.join(' · ')}</code></div></div>
+  </div>`;
+}
+function metricsHTML(p){
+  return p.metrics && p.metrics.length
+    ? `<div class="metrics">${p.metrics.map(m => `<div><span class="num">${m.value}</span><span class="lbl">${m.label}</span></div>`).join('')}</div>` : '';
+}
+function actionsHTML(p){
+  return `<div class="pc-actions">
+    ${p.link ? `<a class="btn btn-small btn-primary" href="${p.link}" target="_blank" rel="noopener">${p.linkLabel || 'Live dashboard'} ${ICON.arrowUpRight}</a>` : ''}
+    <button type="button" class="btn btn-small btn-ghost" data-case="${p.id}">Case study</button>
+  </div>`;
+}
+function featuredCard(p){
+  return `<article class="featured card" style="--delay:0s">
+    ${shot(p, 'shot--lg')}
+    <div class="featured-body">
+      <div class="pc-top"><span class="pc-tag">★ Featured · ${p.tag}</span><span class="pc-period">${p.period}</span></div>
       <h3>${p.title}</h3>
       <p class="summary">${p.summary}</p>
-      ${p.metrics && p.metrics.length ? `
-      <div class="metrics">
-        ${p.metrics.map(m => `<div><span class="num">${m.value}</span><span class="lbl">${m.label}</span></div>`).join('')}
-      </div>` : ''}
-      <ul class="highlights">
-        ${p.highlights.slice(0,4).map(h => `<li>${h}</li>`).join('')}
-      </ul>
-      <div class="stack-row">
-        ${p.stack.map(s => `<span class="chip">${s}</span>`).join('')}
-      </div>
-      ${p.link ? `<a class="pc-link" href="${p.link}" target="_blank" rel="noopener">View project →</a>` : ''}
-    </article>
-  `).join('');
+      ${metricsHTML(p)}
+      <div class="stack-row">${p.stack.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+      ${actionsHTML(p)}
+    </div>
+  </article>`;
+}
+function projectCard(p, idx){
+  return `<article class="project-card card" style="--delay:${idx * 0.07}s">
+    ${shot(p)}
+    <div class="pc-body">
+      <div class="pc-top"><span class="pc-tag">${p.tag}</span><span class="pc-period">${p.period}</span></div>
+      <h3>${p.title}</h3>
+      <p class="summary">${p.summary}</p>
+      ${metricsHTML(p)}
+      <div class="stack-row">${p.stack.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+      ${actionsHTML(p)}
+    </div>
+  </article>`;
 }
 
-const allTools = ['All', ...Array.from(new Set(PROJECTS.flatMap(p => p.stack)))];
-filterBar.innerHTML = allTools.map((t,idx) =>
-  `<button type="button" class="filter-btn ${idx===0 ? 'active':''}" data-tool="${t}">${t}</button>`
-).join('');
+function renderProjects(tool){
+  const list = tool === 'All' ? PROJECTS : PROJECTS.filter(p => p.stack.includes(tool));
+  const feat = list.find(p => p.featured);
+  const rest = list.filter(p => p !== feat);
+  $('featuredSlot').innerHTML = feat ? featuredCard(feat) : '';
+  $('projectGrid').innerHTML = rest.map(projectCard).join('');
+  document.querySelectorAll('#featuredSlot .card, #projectGrid .card').forEach(el => {
+    el.classList.add('reveal'); requestAnimationFrame(() => el.classList.add('in-view'));
+  });
+  bindSpotlight();
+}
 
+const filterBar = $('filters');
+const toolCounts = {};
+PROJECTS.forEach(p => p.stack.forEach(t => toolCounts[t] = (toolCounts[t] || 0) + 1));
+const allTools = ['All', ...Object.keys(toolCounts).sort((a, b) => toolCounts[b] - toolCounts[a])];
+filterBar.innerHTML = allTools.map((t, idx) =>
+  `<button type="button" class="filter-btn ${idx === 0 ? 'active' : ''}" data-tool="${t}" aria-pressed="${idx === 0}">${t}<span class="count">${t === 'All' ? PROJECTS.length : toolCounts[t]}</span></button>`
+).join('');
 filterBar.addEventListener('click', e => {
   const btn = e.target.closest('.filter-btn');
-  if(!btn) return;
-  filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const tool = btn.dataset.tool;
-  renderProjects(tool === 'All' ? PROJECTS : PROJECTS.filter(p => p.stack.includes(tool)));
+  if (!btn) return;
+  filterBar.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+  btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true');
+  renderProjects(btn.dataset.tool);
 });
+renderProjects('All');
 
-renderProjects(PROJECTS);
+// ---- Case study dialog ----
+const dialog = $('caseDialog');
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-case]');
+  if (!btn) return;
+  const p = PROJECTS.find(x => x.id === btn.dataset.case);
+  $('caseInner').innerHTML = `
+    <button type="button" class="case-close" aria-label="Close">${ICON.close}</button>
+    ${shot(p, 'shot--lg')}
+    <div class="case-body">
+      <div class="pc-top"><span class="pc-tag">${p.tag}</span><span class="pc-period">${p.period}</span></div>
+      <h3 id="caseTitle">${p.title}</h3>
+      <p class="summary">${p.summary}</p>
+      ${metricsHTML(p)}
+      <h4 class="case-sub">What I did</h4>
+      <ul class="highlights">${p.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+      <div class="stack-row">${p.stack.map(s => `<span class="chip">${s}</span>`).join('')}</div>
+      ${p.link ? `<div class="pc-actions"><a class="btn btn-primary" href="${p.link}" target="_blank" rel="noopener">${p.linkLabel || 'Open live dashboard'} ${ICON.arrowUpRight}</a></div>` : ''}
+    </div>`;
+  dialog.showModal();
+  document.body.classList.add('modal-open');
+});
+dialog.addEventListener('click', e => {
+  if (e.target === dialog || e.target.closest('.case-close')) dialog.close();
+});
+dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
+
+// ---- Card spotlight (follows the cursor) ----
+function bindSpotlight(){
+  document.querySelectorAll('.card:not([data-spot])').forEach(card => {
+    card.dataset.spot = '1';
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      card.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+}
+bindSpotlight();
 
 // ---- Mobile nav ----
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
+const navToggle = $('navToggle');
+const navLinks = $('navLinks');
 navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  navToggle.classList.toggle('open');
+  const open = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', open);
 });
-
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.classList.remove('open');
-  });
-});
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  navLinks.classList.remove('open'); navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false');
+}));
 
 // ---- Scroll effects ----
-const navbar = document.getElementById('navbar');
-const backToTop = document.getElementById('backToTop');
-const progressBar = document.getElementById('progressBar');
+const navbar = $('navbar'), backToTop = $('backToTop'), progressBar = $('progressBar');
+const sections = document.querySelectorAll('section[id], footer[id]');
+const navItems = document.querySelectorAll('.nav-links a');
+function onScroll(){
+  const y = window.scrollY;
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (docH > 0 ? (y / docH) * 100 : 0) + '%';
+  navbar.classList.toggle('scrolled', y > 40);
+  backToTop.classList.toggle('show', y > 700);
+  let current = '';
+  sections.forEach(s => { if (y >= s.offsetTop - 220) current = s.id; });
+  navItems.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = (scrollY / docHeight) * 100;
-
-  progressBar.style.width = progress + '%';
-
-  if (scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-
-  if (scrollY > 600) {
-    backToTop.classList.add('show');
-  } else {
-    backToTop.classList.remove('show');
-  }
-});
-
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// ---- Intersection Observer ----
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
+// ---- Reveal on scroll + count-up ----
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in-view');
-      observer.unobserve(entry.target);
-    }
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('in-view');
+    observer.unobserve(entry.target);
   });
-}, observerOptions);
-
-document.querySelectorAll('section, .tl-item, .skill-card, .project-card, .ach-item').forEach(el => {
-  el.classList.add('reveal');
-  observer.observe(el);
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.section-head, .tl-item, .skill-card, .about-main, .about-card, .award-card, .cert, .contact-card').forEach(el => {
+  el.classList.add('reveal'); observer.observe(el);
 });
 
-// ---- Active nav link ----
-const sections = document.querySelectorAll('section[id]');
-const navItems = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 200) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navItems.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) {
-      link.classList.add('active');
-    }
-  });
-});
+function countUp(el){
+  const raw = el.dataset.count;
+  const m = raw.match(/^(\d+)(.*)$/);
+  if (!m || reduce) return;
+  const target = +m[1], suffix = m[2];
+  const t0 = performance.now(), dur = 1100;
+  const step = (t) => {
+    const k = Math.min(1, (t - t0) / dur);
+    el.textContent = Math.round(target * (1 - Math.pow(1 - k, 3))) + suffix;
+    if (k < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('.num').forEach(countUp); statObs.unobserve(e.target); } });
+}, { threshold: 0.4 });
+statObs.observe($('heroStats'));
 </script>
 
 <!-- Cloudflare Web Analytics -->
